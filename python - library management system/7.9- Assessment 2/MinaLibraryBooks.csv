@@ -1,0 +1,77 @@
+book_id,title,author,year,publisher,num_copies,publication_date
+0e652b82-9b5f-499e-8285-0eadb28185c4,stuff,stuffy mcstuff,2013,puffin,7,2020-01-01
+7df3e421-e9bf-46c7-8dfd-9d121e5f8650,Book Two,Author B,2018,Publisher B,3,2018-06-15
+a396062f-2d43-4a3a-b488-eba33d151787,Book Three,Author C,2022,Publisher C,2,2022-03-22
+3d123ffb-ab2f-4821-83cd-a5721b6e7da2,Desert Survival Guide,Youssef Brown,1971,Publisher D,6,1901-09-20
+d5982b0d-ee46-4944-afd5-404c6d8e5143,The Slave Trade in Africa,Henry Ibrahim,2004,Publisher E,1,1963-07-28
+9b012957-4b2b-4444-9c64-7a7c74ebfc1c,Ancient Maps of Africa,Nour Jackson,1975,Publisher E,3,1901-11-10
+03d4f48a-9fbe-44d1-b0ad-d006794d94a9,Post-colonial Africa,Oliver Rashad,1903,Publisher C,1,1995-11-02
+1270bfb0-e819-4c00-9e32-7a8f791a0e6b,Mali Empire,Thomas Salah,1930,Publisher D,2,1947-08-16
+f3be8fda-d392-4cf7-9f77-da5919e40aa8,Nelson Mandela's Legacy,James Adel,1947,Publisher D,2,2012-10-21
+17d75258-871e-4f3e-a790-9817ad46443f,Pharaohs and Pyramids,Hana Jackson,1937,Publisher A,8,1913-07-09
+54893e4e-dd85-4bf1-9f3f-191985ce6bf4,African Food and Culture,Mariam Adel,1903,Publisher D,6,1978-07-19
+631d16ac-3767-4d24-885e-644f18f76814,The Algerian War,John Ibrahim,1950,Publisher B,7,1901-11-14
+be1b2fc5-f187-44ba-8477-b4862a93d4d3,The Bantu Expansion,Mohamed Salah,1908,Publisher A,2,1968-07-02
+a72bdc5c-457f-4a56-af81-b1acfd7e3565,Nelson Mandela's Legacy,Thomas Taylor,1920,Publisher A,2,2007-11-25
+02fc69fc-aaeb-4a5a-b95a-814fdf442dac,Mali Empire,William Brown,1958,Publisher C,7,1925-02-15
+49b52888-0391-4b99-b8d4-3e2651896865,Pharaohs and Pyramids,John Shafiq,1917,Publisher B,1,1982-06-20
+3a3bae1b-fbea-432d-9350-ae38bb97098e,The Horn of Africa,Ahmed Mostafa,1955,Publisher D,9,1990-02-11
+537ce02a-698e-4c12-8532-cc9559039f4f,The Bantu Expansion,Hana Taylor,1939,Publisher C,1,2011-12-21
+b8287186-fed4-4691-aec2-4e56a4727187,The Great Rift Valley,Dina Thomas,1998,Publisher B,7,1953-04-26
+02ef93af-c877-4569-a60b-2528039da113,African Art,Amr Wilson,1962,Publisher C,1,1913-01-08
+9565280c-710d-496f-8336-a0880f56cfa7,Africa and the World,Hana Rashad,1970,Publisher D,1,2020-08-03
+5bc626f8-82b2-4841-bde1-67067068aba4,Ancient Maps of Africa,Thomas Salah,1913,Publisher B,7,1913-07-18
+79bbfe8e-581e-43d5-98ed-bcd6ba4d01e5,African Kings,Nour Jackson,1964,Publisher C,8,1928-05-26
+8c156a47-5080-4395-a425-b86531ecf490,The Bantu Expansion,Henry Brown,1977,Publisher B,6,1927-10-07
+ab364b6f-9c1b-49a6-89cc-55561dfa3819,Nelson Mandela's Legacy,Sarah Mostafa,1964,Publisher A,4,1940-11-05
+347f8f6c-9974-48a0-82d1-85055613c7bb,The Algerian War,Ahmed Ibrahim,1941,Publisher E,4,1925-11-26
+89dc6f90-cbc7-4a4e-8a63-28ae76824a35,African Kings,Ahmed Ali,2009,Publisher A,7,1993-09-03
+073ca997-30c0-4d96-a47b-05b6eb8c55aa,Exploring the Serengeti,William Mostafa,1996,Publisher A,9,2002-12-20
+99e4d7b0-c9ba-4375-bcf3-ffb944abf88e,Modern South Africa,Henry Davies,1998,Publisher A,1,1929-05-06
+a977ce25-66d2-4a7e-a799-29d6226baea3,African Myths and Legends,Amr Thomas,1969,Publisher E,5,1987-11-10
+3827de82-2ed7-4698-b7e7-89e8c69b6b45,The Ivory Coast,Dina Gad,1935,Publisher B,6,1969-11-22
+b37f8351-3a64-455b-b717-944031affd35,Mysteries of Timbuktu,Mohamed Rashad,1986,Publisher C,10,1953-09-05
+48461d53-cb40-467d-b48f-3b010d693a5a,Ancient African Civilisations,Youssef Brown,1935,Publisher D,8,1951-02-02
+8baf07a7-dc09-4753-bb67-2450124bd80e,The Boer Wars,Dina Thomas,1961,Publisher A,8,1929-01-15
+82982b4b-2b5e-4bdf-89e2-5c7d8ba7a1ee,Colonial Africa,Mohamed Smith,1941,Publisher C,4,1912-11-02
+2eb924ab-da96-409e-afdd-e61c30b6882e,Nile River Mysteries,George Aziz,1943,Publisher E,6,1950-08-27
+de4313af-bbdc-4980-9025-c2107e62e367,The Algerian War,Alex Johnson,1980,Publisher A,10,2018-07-06
+1c6bc26a-e847-4841-8acf-5facb20c8963,The Bantu Expansion,Mariam Ibrahim,1970,Publisher A,2,1937-10-23
+3dca646f-4669-4b71-9f3e-1896865565e8,African Drums,John Shafiq,2018,Publisher A,9,1918-04-20
+6d639823-cfe0-4127-bedb-d08706490ac0,Desert Survival Guide,Mohamed Hassan,1987,Publisher A,2,1962-12-19
+4b1873a7-7acc-4455-8d2a-0bc6d92450e3,The Bantu Expansion,Hassan Ibrahim,2015,Publisher B,1,1934-12-21
+fc320ae5-9a52-4515-ad1b-2f1a9e8468eb,African Wildlife,Sarah Rashad,1919,Publisher D,8,1920-12-14
+23e04da1-e036-4d60-a490-e35a491eb669,The Bantu Expansion,John Ali,1931,Publisher B,9,1952-06-22
+2b8d7d42-d3b2-46e2-9078-3fc6bb4c2c5f,Mysteries of Timbuktu,Ali Young,1925,Publisher A,1,2010-10-26
+c8fc6afc-6f00-4936-b649-0a2c9f0ec45c,Discovering Ethiopia,Henry Taylor,2006,Publisher A,2,1964-02-14
+72187eb4-6c58-49ed-a006-ac99b27d0eed,African Food and Culture,John Taylor,2001,Publisher A,7,1930-02-11
+7e19a996-2062-4ad7-80c9-2f5381dd31c6,New Title,Test Author,2023,Test Publisher,5,2023-01-01
+c63172db-1d9c-49b4-91f6-2b812243cbb0,Test Book,Test Author,2023,Test Publisher,5,2023-01-01
+d17006a5-1d1e-4f8f-a4d4-d75a53f6b9f4,Test Book,Test Author,2023,Test Publisher,5,2023-01-01
+8057eaee-2bbf-409c-9bf7-bd592b6647a8,Test Book,Test Author,2023,Test Publisher,5,2023-01-01
+7905a5de-96a9-49a6-98b7-97b472900b7c,Test Book,Test Author,2023,Test Publisher,5,2023-01-01
+301a506a-075e-44eb-8a89-f69da579e210,Test Book,Test Author,2023,Test Publisher,5,2023-01-01
+cf2c75f5-73cd-4ad0-8592-9fb795d420f7,Test Book,Test Author,2023,Test Publisher,5,2023-01-01
+dae3d9fb-7549-4ac7-bb0d-28d165347538,Updated Title,Test Author,2023,Test Publisher,5,2023-01-01
+def96c95-920d-433e-b219-4ddd41b59edd,Test Book,Test Author,2023,Test Publisher,5,2023-01-01
+cdaf5cc3-27fe-4fdc-bd2a-9b8097d06b84,Test Book,Test Author,2023,Test Publisher,5,2023-01-01
+8de0e08a-f2b1-4fd8-951b-a32525d7d03f,Test Book,Test Author,2023,Test Publisher,5,2023-01-01
+e18c7473-ef16-46de-95b7-2c4f8fb82e26,Test Book,Test Author,2023,Test Publisher,5,2023-01-01
+144640f7-487c-4208-be08-eecb66cfe189,Test Book,Test Author,2023,Test Publisher,5,2023-01-01
+a4fe2a8c-0293-46ec-af62-f4e5a8529e81,Test Book,Test Author,2023,Test Publisher,5,2023-01-01
+d3708b57-8ead-4e26-baae-dd3e33f50029,Test Book,Test Author,2023,Test Publisher,5,2023-01-01
+eb773bd0-6e1d-4524-b161-415ac60d8217,CLI Modified Title,Test Author,2023,Test Publisher,5,2023-01-01
+9f62e8f9-70c9-40f3-bd48-f506cee2b05d,Test Book,Test Author,2023,Test Publisher,5,2023-01-01
+70c185e3-4192-404f-90d6-84d4bcacb16c,Test Book,Test Author,2023,Test Publisher,5,2023-01-01
+d54d0676-9486-44bf-963e-63af4f82c6cd,Test Book,Test Author,2023,Test Publisher,5,2023-01-01
+6c1869b4-e7fe-40b1-b7dc-35a23fcfca8f,Test Book 1729958384,Test Author,2023,Test Publisher,5,2023-01-01
+2936b08f-eca7-45b1-a51b-f6b8ea72361b,Test Book 1729958452,Test Author,2023,Test Publisher,5,2023-01-01
+fe0305c1-5fc3-4540-a026-3d8ac1c58946,stuff,mary,2020,puffin,4,2020-03-15
+1c5455da-5aad-4d07-a868-6039dd3d21b0,things,mary,2020,puffin,8,2020-13-05
+da4f7602-cb13-4e3b-a8c5-fa40c9b3d546,things about books,booky mcbook,2020,puffin,8,2020-03-15
+ab40ed30-df08-425e-9d5b-c920aadaeb40,olor,mary,2020,puffin,8,2020-03-15
+dae32c33-72c3-4e5f-b267-65cb66a7923d,africa,thomas,2020,puffin,8,2020-03-15
+49e4b80f-79a2-4dbf-98a0-6e24f80db0ae,patty,bob,2020,puffin,5,2020-03-15
+57ff3314-b17a-4448-8a40-a81eef69bc69,rex,trex,2020,puffin,5,2020-03-15
+dd0977ed-26f3-402f-a560-9dd795c4cfb3,yetiii,novel,2020,puffin,9,2020-03-15
+8e11362d-a5d0-4293-a19d-8615250f16f9,liverpooly,anfield,2020,puffin,15,2020-05-13

@@ -1,0 +1,7 @@
+{%- if collection -%}
+  <div class="text-center">
+    <a onclick="javascript:history.back();" class="btn btn--tertiary"> <!-- {{ collection.url }} -->
+      &xlarr; {{ 'products.general.collection_return' | t: collection: collection.title }}
+    </a>
+  </div>
+{%- endif -%}

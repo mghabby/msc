@@ -1,0 +1,93 @@
+{%- if section.settings.collection_image_enable and collection.image -%}
+  <div class="collection-hero"
+    data-aos="hero__animation">
+    <div
+      class="collection-hero__image lazyload"
+      data-bgset="{% include 'bgset', image: collection.image %}"
+      data-sizes="auto">
+    </div>
+    <noscript>
+      <div
+        class="collection-hero__image"
+        style="background-image: url({{ collection.image | img_url: '1400x' }});";
+        ></div>
+    </noscript>
+
+    <div class="collection-hero__content">
+      <div class="page-width text-center">
+        <div class="hero__text-shadow" data-aos>
+          <header class="section-header section-header--hero" data-aos>
+            <h1 class="section-header__title appear-delay">
+              {{ collection.title }}
+            </h1>
+            
+            
+           <!-- {% if collection.handle == "pantalon-de-yoga" or collection.handle == "bras-de-sport" or collection.handle == "sets" or collection.handle == "homme" %}
+            	<video class="collection_banner_video" autoplay="" loop="" muted="" playsinline=""> 
+      				<source src="{{ 'yoogaflex' | asset_url }}">       
+                	<source src="{{ 'yoogaflex_webm' | asset_url }}">
+    			</video>
+            {% endif %} -->
+            
+            
+            {% if collection.description != blank and section.settings.description_enable %}
+              {%- assign desc_length = collection.description | size -%}
+              <div class="rte section-header__description{% if desc_length < 200 %} section-header__description--large{% endif %} appear-delay-1">
+                {{ collection.description }}
+              </div>
+            {% endif %}
+          </header>
+        </div>
+      </div>
+    </div>
+  </div>
+{%- else -%}
+
+
+  <header class="section-header" data-aos>
+      <h1 class="section-header__title appear-delay">
+        {{ collection.title }}
+      </h1>
+      
+      <!--{% if collection.handle == "pantalon-de-yoga" or collection.handle == "bras-de-sport" or collection.handle == "sets" or collection.handle == "homme" %}
+      <a href="/pages/yoogaflex">      	
+      			<video class="collection_banner_video" autoplay="" loop="" muted="" playsinline=""> 
+      				<source src="{{ 'yoogaflex.mp4' | asset_url }}">       
+                	<source src="{{ 'yoogaflex_webm.webm' | asset_url }}">
+    			</video>
+      
+      	</a>
+		{% endif %}-->
+  </header>
+
+
+  <div class="page-width page-content page-content--flush-bottom">
+    
+      {% if collection.description != blank and section.settings.description_enable %}
+        {%- assign desc_length = collection.description | size -%}
+        <div class="rte section-header__description{% if desc_length < 200 %} section-header__description--large{% endif %} appear-delay-1">
+          {{ collection.description }}
+        </div>
+      {% endif %}
+  </div>
+{%- endif -%}
+
+{% schema %}
+  {
+    "name": "Collection header",
+    "settings": [
+      {
+        "type": "checkbox",
+        "id": "collection_image_enable",
+        "label": "Show collection image",
+        "default": true
+      },
+      {
+        "type": "checkbox",
+        "id": "description_enable",
+        "label": "Show description in header",
+        "default": true
+      }
+    ]
+  }
+{% endschema %}

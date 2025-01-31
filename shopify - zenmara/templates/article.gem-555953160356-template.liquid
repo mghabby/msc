@@ -1,0 +1,202 @@
+{% comment %}
+	GEMPAGE BUILDER (https://apps.shopify.com/gempage)
+
+	You SHOULD NOT modify source code in this page because
+	It is automatically generated from GEMPAGE BUILDER
+	Try to edit page with the live editor.
+{% endcomment %}
+<!--GEM_HEADER-->
+<link data-instant-track rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" class="gf-style" />
+<link data-instant-track rel="stylesheet" type="text/css" href="https://d1um8515vdn9kb.cloudfront.net/files/vendor.css?refresh=1" class="gf-style" />
+<link data-instant-track rel="stylesheet" type="text/css" href="{{ 'gem-article-555953160356.css' | asset_url }}" class="gf_page_style">
+<!--GEM_HEADER_END-->
+{%- assign number_of_comments = article.comments_count -%}{% if comment %}
+  {%- assign number_of_comments = article.comments_count | plus: 1 -%}
+{% endif %}<div class="page-width page-content">  <article class="article">
+    <div class="article__content">      <header class="section-header" data-aos>
+        {% if section.settings.blog_show_date or article.tags.size > 0 or articles.comments_count > 0 %}
+          <div class="article__date">
+            {% if section.settings.blog_show_tags and article.tags.size > 0 %}
+              {% for tag in article.tags %}
+                {% include 'filter-out-custom-tags' %}
+                <a href="{{ blog.url }}/tagged/{{ tag | handle }}">{{ tag }}</a> &middot;
+              {% endfor %}
+            {% endif %}
+            {% if section.settings.blog_show_comments and article.comments_count > 0 %}
+              <a href="#comments">
+                {{ 'blogs.comments.with_count' | t: count: article.comments_count }}
+              </a> &middot;
+            {% endif %}
+            {% if section.settings.blog_show_date %}
+            {% endif %}
+          </div>
+        {% endif %}
+        <h1 class="section-header__title appear-delay">
+          {{ article.title }}
+        </h1>
+        {% if section.settings.blog_show_author %}
+          <div class="section-header__description appear-delay-1">
+            <div class="article__author">by {{ article.author }}</div>
+          </div>
+        {% endif %}
+      </header>
+    </div>    {% if section.settings.blog_show_image and article.image %}
+      <div class="article__image-wrap">
+        <div class="image-wrap aos-animate article__featured-image" style="height: 0; padding-bottom: {{ 100 | divided_by: article.image.aspect_ratio }}%;">
+          {%- assign img_url = article.image | img_url: '1x1' | replace: '_1x1.', '_{width}x.' -%}
+          <img class="lazyload"
+              data-src="{{ img_url }}"
+              data-widths="[360, 540, 750, 900, 1080, 1600]"
+              data-aspectratio="{{ article.image.aspect_ratio }}"
+              data-sizes="auto"
+              alt="{{ article.image.alt }}">
+          <noscript>
+            <img class="lazyloaded" src="{{ article.image | img_url: '1000x' }}" alt="{{ block.settings.image.alt }}">
+          </noscript>
+        </div>
+      </div>
+    {% endif %}    <div class="article__content">
+      <div class="article__body rte rte--indented-images">
+        <div class="mtc-article-body-06f21fc66"><!--Gem_Page_Main_Editor--><div class="clearfix"></div><div class="gryffeditor"></div><div id="divContentBk"></div><!--End_Gem_Page_Main_Editor-->
+</div>
+        <div class="klaviyo-form-TBCTWr"></div>
+      </div>      {% if section.settings.social_sharing_blog %}
+        {% include 'social-sharing', share_title: article.title, share_permalink: article.url, share_image: article.image %}
+      {% endif %}
+      
+   <div>
+<div>
+<div>
+   
+<div><a href="{{ blog.previous_article }}" class="btn" style="float: left">Blog Précédent</a><a href="{{ blog.next_article }}" class="btn" style="float: right">Blog Suivant</a></div>
+    </div>
+</div>
+  
+      {% if blog.comments_enabled? %}        {% if number_of_comments > 0 %}
+          <hr class="hr--large hr--clear">
+          <header class="section-header" data-aos>
+            <h2 class="section-header__title">
+              {{ 'blogs.comments.with_count' | t: count: number_of_comments }}
+            </h2>
+          </header>
+        {% endif %}        {% paginate article.comments by 5 %}
+          
+          <div id="comments">            {% if comment and comment.errors == blank %}
+              <p class="note note--success">
+                {% if blog.moderated? %}
+                  {{ 'blogs.comments.success_moderated' | t }}
+                {% else %}
+                  {{ 'blogs.comments.success' | t }}
+                {% endif %}
+              </p>
+            {% endif %}            {% if number_of_comments > 0 %}
+              <ul class="no-bullets">
+                
+                {% if comment and comment.errors == blank %}
+                  <li id="{{ comment.id }}" class="comment">
+                    {% include 'comment' %}
+                  </li>
+                {% endif %}                {% for comment in article.comments %}
+                  <li id="{{ comment.id }}" class="comment">
+                    {% include 'comment' %}
+                  </li>
+                {% endfor %}
+              </ul>              {% if paginate.pages > 1 %}
+                {% include 'pagination' %}
+              {% endif %}            {% endif %}            <hr class="hr--large hr--clear">            <h3 class="h2 text-spacing">{{ 'blogs.comments.title' | t }}</h3>            <div class="form-vertical">
+              {% form 'new_comment', article %}                {{ form.errors | default_errors }}                <div class="grid grid--small">
+                  <div class="grid__item medium-up--one-half">
+                    <label for="CommentAuthor">{{ 'blogs.comments.name' | t }}</label>
+                    <input class="input-full{% if form.errors contains 'author' %} error{% endif %}" type="text" name="comment[author]" id="CommentAuthor" value="{{ form.author }}" autocapitalize="words">
+                  </div>
+                  <div class="grid__item medium-up--one-half">
+                    <label for="CommentEmail">{{ 'blogs.comments.email' | t }}</label>
+                    <input class="input-full{% if form.errors contains 'email' %} error{% endif %}" type="email" name="comment[email]" id="CommentEmail" value="{{ form.email }}" autocapitalize="off">
+                  </div>
+                </div>                <label for="CommentBody">{{ 'blogs.comments.message' | t }}</label>
+                <textarea class="input-full{% if form.errors contains 'body' %} error{% endif %}" name="comment[body]" id="CommentBody">{{ form.body }}</textarea>                {% if blog.moderated? %}
+                  <p><small>{{ 'blogs.comments.moderated' | t }}</small></p>
+                {% endif %}                <input type="submit" class="btn" value="{{ 'blogs.comments.post' | t }}">
+              
+                <script>
+                grecaptcha.ready(function() {
+                    grecaptcha.execute('6Lc4S74ZAAAAAKq7GDL3_gN9xaCswOO_7T1diixO', {action: 'homepage'}).then(function(token) {
+                    });
+                });
+                </script>              {% endform %}
+            </div>          </div>
+        {% endpaginate %}
+      {% endif %}      <hr class="hr--large hr--clear">
+    </div>
+  </article>  <div class="text-center">
+    <a href="{{ blog.url }}" class="btn btn--tertiary">
+      <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon--wide icon-arrow-left" viewBox="0 0 50 15"><path d="M50 5.38v4.25H15V15L0 7.5 15 0v5.38z"/></svg>
+      {{ blog.title }}
+    </a>    <hr class="hr--medium hr--clear medium-up--hide">
+  </div>
+</div><script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Article",
+  "articleBody": <!--Gem_Page_Main_Editor--><div class="clearfix"></div><div class="gryffeditor"></div><div id="divContentBk"></div><!--End_Gem_Page_Main_Editor-->
+,
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": {{ shop.url | append: page.url | json }}
+  },
+  "headline": {{ article.title | json }},
+  {% if article.excerpt != blank %}
+    "description": {{ article.excerpt | strip_html | json }},
+  {% endif %}
+  {% if article.image %}
+    {% assign image_size = article.image.width | append: 'x' %}
+    "image": [
+      {{ article | img_url: image_size | prepend: "https:" | json }}
+    ],
+  {% endif %}
+  "author": {
+    "@type": "Person",
+    "name": {{ article.author | json }}
+  },
+  "publisher": {
+    "@type": "Organization",
+    {% if settings.share_image %}
+      {% assign image_size = settings.share_image.width | append: 'x' %}
+      "logo": {
+        "@type": "ImageObject",
+        "height": {{ settings.share_image.height | json }},
+        "url": {{ settings.share_image | img_url: image_size | prepend: "https:" | json }},
+        "width": {{ settings.share_image.width | json }}
+      },
+    {% endif %}
+    "name": {{ shop.name | json }}
+  }
+}
+</script>
+  
+  
+<script type="text/javascript">
+  const start_time_captcha = Date.now();
+  
+  document.querySelector("#comment_form").addEventListener("submit", function(e){
+    const end_time_captcha = Date.now();
+    
+    if((end_time_captcha - start_time_captcha) < 8000)
+    {
+      e.preventDefault();
+      alert("Veuillez réessayer, vérifier toutes les données saisies!");
+    }
+ 
+	});
+</script>
+  
+<!--GEM_FOOTER-->
+{% capture GEM_FOOTER_SCRIPT %}
+<script data-instant-track type="text/javascript">
+	var pageLibs = [		'{{ 'gem-article-555953160356.js' | asset_url }}',	];
+</script>
+<script data-instant-track type="text/javascript">
+	var GEMVENDOR = GEMVENDOR || (function(){		var _js = {};		return {			init: function(Args) {				_js = Args;			},			getLibs: function() {				return _js;			}		};	}());	GEMVENDOR.init(pageLibs);</script>
+<script data-instant-track type="text/javascript" src="https://d1um8515vdn9kb.cloudfront.net/files/gempagev2.js?v=1.0" class="gf-script" defer></script>
+{% endcapture %}
+<!--GEM_FOOTER_END-->

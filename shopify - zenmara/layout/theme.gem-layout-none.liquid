@@ -1,0 +1,221 @@
+{% comment %}
+	GEMPAGE BUILDER (https://apps.shopify.com/gempage)
+
+	You SHOULD NOT modify source code in this page because
+	It is automatically generated from GEMPAGE BUILDER
+	Try to edit page with the live editor.
+{% endcomment %}
+<!doctype html>
+<html class="no-js" lang="{{ request.locale }}">
+<head>
+  <meta name="facebook-domain-verification" content="q88xkdyszx5o5tgyw3u4k4vjjw6cwr" />
+<meta name="facebook-domain-verification" content="rn1lz7pu0ortxqe4pgi4l320ia96kt" />
+<meta name="p:domain_verify" content="cdee7cbdef9bccfe018e3a8802db58c0"/>
+  <!--<script type="text/javascript" id="cat-snippet">
+  (function(w, d, t, u, a, e, r) {
+    w.ContentAnalyticsToolObject = a;
+    w[a] =
+      w[a] ||
+      function() {
+        (w[a].q = w[a].q || []).push(arguments);
+      };
+    w[a].l = +new Date();
+  
+    e = d.createElement(t);
+    r = d.getElementsByTagName(t)[0];
+    e.async = 1;
+    e.src = u;
+    r.parentNode.insertBefore(e, r);
+  })(window, document, 'script', 'https://scatec.io/t/app.js?id=27e63187-3e40-42a9-83b6-d443bb2c2832', 'cat');
+  cat('create', '27e63187-3e40-42a9-83b6-d443bb2c2832');
+  cat('send', 'pageview');
+</script>-->
+  
+<script data-ad-client="ca-pub-1453401884179734" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>  
+  
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="{{ settings.color_button }}">
+  <link rel="canonical" href="{{ canonical_url }}">
+  <meta name="format-detection" content="telephone=no">
+  
+  
+    <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-T6CP4XN');</script>
+  <!-- End Google Tag Manager -->
+  
+ <!-- Global Site Tag (gtag.js) - Google AdWords: GOOGLE_CONVERSION_ID -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-739498673"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments)};
+  gtag('js', new Date());
+
+  gtag('config', 'AW-739498673');
+</script>
+<script type="text/javascript">
+	{% if template contains 'product' %}
+		gtag('event', 'page_view', {
+		ecomm_prodid: 'shopify_FR_{{ product.id }}_{{ product.variants.first.id }}',
+		ecomm_pagetype: 'product',
+		ecomm_totalvalue: {{ product.price | money_without_currency | replace: ',', '.' }}
+		});
+	{% else if template contains 'cart' %}
+		gtag('event', 'page_view', {
+		ecomm_prodid: [{% for item in cart.items %}'shopify_FR_{{ item.product.id }}_{{ item.product.variants.first.id }}',{% endfor %}],
+		ecomm_pagetype:  'cart',
+		ecomm_totalvalue: {{cart.total_price | money_without_currency | replace: ',', '.' }}
+		});
+	{% else if template contains 'search' %}
+		gtag('event', 'page_view', {
+		ecomm_prodid: '',
+		ecomm_pagetype: 'searchresults',
+		ecomm_totalvalue: ''
+		});
+	{% else if template contains 'index' %}
+		gtag('event', 'page_view', {
+		ecomm_prodid: '',
+		ecomm_pagetype: 'home',
+		ecomm_totalvalue: ''
+		});
+	{% else %}
+		gtag('event', 'page_view', {
+		ecomm_prodid: '',
+		ecomm_pagetype: 'other',
+		ecomm_totalvalue: ''
+		});
+	{% endif %}
+</script>
+
+
+
+
+  {%- if settings.favicon -%}
+    <link rel="shortcut icon" href="{{ settings.favicon | img_url: '32x32' }}" type="image/png" />
+  {%- endif -%}
+
+  <title>
+  {{ page_title }}{% if current_tags %} &ndash; tagged "{{ current_tags |
+  join: ', ' }}"{% endif %}{% if current_page != 1 %} &ndash; Page {{
+  current_page }}{% endif %}{% unless page_title contains shop.name %}
+  &ndash; {{ shop.name }}{% endunless %}
+</title>
+  
+{% if page_description %}
+<meta name="description" content="{{ page_description | escape }}" />
+{% endif %}
+<link rel="canonical" href="{{ canonical_url }}" />
+  
+  {% if template contains "index" %}<link rel="preload" as="image" href="https:{{ 'video_yoga_poster.jpg' | asset_url }}">{% endif %}
+  
+
+  {% include 'social-meta-tags' %}
+  
+  {% capture MyJsFunc %}load', function(){}{% endcapture %} {% capture MyJsFunc2%}document.addEventListener('StartAsyncLoading',function(event){asyncLoad();});if(window.attachEvent){%endcapture %} {% if template contains "index" or template contains "product" or template contains "collection" or page.url contains "pages" or blog.url contains "blogs" %} {{ content_for_header | replace: "load', asyncLoad",MyJsFunc | replace: 'if(window.attachEvent)', MyJsFunc2 | replace: 'src="//cdn.shopify.com/s/assets/', 'data-src="https://cdn.shopify.com/s/assets/' }} {% else %} 
+    {% comment %}Start Matcha code{% endcomment %}
+    {% capture matcha_snippet_content %}{% include 'matcha-snippet' %}{% endcapture %}
+    {% unless matcha_snippet_content contains "Liquid error" %}
+      {{ matcha_snippet_content }}
+    {% endunless %}
+    {% comment %}End Matcha code{% endcomment %}
+      {{ content_for_header }} {% endif %}
+  
+  
+  <script>
+    var theme = {
+      stylesheet: "{{ 'theme.scss.css' | asset_url }}",
+      template: {{ template | json }},
+      strings: {
+        addToCart: {{ 'products.product.add_to_cart' | t | json }},
+        soldOut: {{ 'products.product.sold_out' | t | json }},
+        unavailable: {{ 'products.product.unavailable' | t | json }},
+        regularPrice: {{ 'products.general.regular_price' | t | json }},
+        salePrice: {{ 'products.general.sale_price' | t | json }},
+        stockLabel: {{ 'products.product.stock_label' | t: count: '[count]' | json }},
+        willNotShipUntil: {{ 'products.product.will_not_ship_until' | t: date: '[date]' | json }},
+        willBeInStockAfter: {{ 'products.product.will_be_in_stock_after' | t: date: '[date]' | json }},
+        waitingForStock: {{ 'products.product.waiting_for_stock' | t | json }},
+        cartItems: {{ 'cart.general.item_count' | t: count: '[count]' | json }},
+        cartConfirmDelete: {{ 'cart.general.delete_confirm' | t | json }},
+        cartTermsConfirmation: {{ 'cart.general.terms_confirm' | t | json }}
+      },
+      settings: {
+        dynamicVariantsEnable: true,
+        cartType: {{ settings.cart_type | json }},
+        moneyFormat: {{ shop.money_format | json }},
+        quickView: {{ settings.quick_shop_enable }},
+        hoverProductGrid: {{ settings.product_hover_image }},
+        themeName: 'Streamline',
+        themeVersion: "3.0.2"
+      }
+    };
+
+    document.documentElement.className = document.documentElement.className.replace('no-js', 'js');
+  </script>
+
+  {% include 'critical-css' %}
+  {% include 'load-css' %}
+  
+  
+  <script>
+      window.lazySizesConfig = window.lazySizesConfig || {};
+      window.lazySizesConfig.loadMode = 1;
+      window.lazySizesConfig.expand = 10;
+      window.lazySizesConfig.hFac = 0.1;
+  </script>
+  
+  
+  
+  
+  
+     <script src="{{ 'vendor-v2.js' | asset_url | split: '?' | first }}?123" defer="defer"></script>
+  {%- if shop.enabled_currencies.size > 1 -%}
+    <link rel="stylesheet" href="{{ 'currency-flags.css' | asset_url }}">
+  {%- endif -%}
+  <script src="{{ 'theme.js' | asset_url }}" defer="defer"></script>
+  {%- if request.page_type contains 'customers/' -%}
+    <script src="{{ 'shopify_common.js' | shopify_asset_url }}" defer="defer"></script>
+  {%- endif -%}
+  
+
+ 
+  
+  {% if template contains "product" %}
+  {% endif %}
+  
+   {% comment %}<script data-src="https://shopoe.net/app.js"></script>{% endcomment %}
+  <script>var appElement = document.getElementById('beappjs-wrapper-ct');if (appElement) {appElement.style.display = 'block';}</script>
+  
+ <!-- <script data-src="https://shopoe.net/app.js"></script>-->
+  
+  <!--{% if blog.url contains "blogs" %}
+  <script src="https://www.google.com/recaptcha/api.js?render=6Lc4S74ZAAAAAKq7GDL3_gN9xaCswOO_7T1diixO"></script>
+  {% endif %}-->
+  
+{% include 'grss-json-ld' %}<!--Gem_Page_Header_Script-->
+{% include 'gem-app-header-scripts' %}
+<!--End_Gem_Page_Header_Script-->
+</head>
+
+<body>
+<div class="gem-container">
+	{{ content_for_layout }}
+</div><!-- end .gem-container -->
+<!--Gem_Page_Footer_Script-->
+{% include 'gem-app-footer-scripts' %}
+<!--End_Gem_Page_Footer_Script-->
+    <style>
+    img[Attributes Style]{
+    height:auto !important;
+    }
+    [data-label="Product List"] img.gf_product-image.gf_featured-image{
+    height:auto !important;
+    }
+  </style>
+</body>
+</html>

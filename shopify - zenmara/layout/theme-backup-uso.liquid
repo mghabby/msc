@@ -1,0 +1,323 @@
+<!doctype html>
+<html class="no-js" lang="{{ request.locale }}">
+<head>
+
+  <script type="text/javascript" id="cat-snippet">
+  (function(w, d, t, u, a, e, r) {
+    w.ContentAnalyticsToolObject = a;
+    w[a] =
+      w[a] ||
+      function() {
+        (w[a].q = w[a].q || []).push(arguments);
+      };
+    w[a].l = +new Date();
+  
+    e = d.createElement(t);
+    r = d.getElementsByTagName(t)[0];
+    e.async = 1;
+    e.src = u;
+    r.parentNode.insertBefore(e, r);
+  })(window, document, 'script', 'https://scatec.io/t/app.js?id=27e63187-3e40-42a9-83b6-d443bb2c2832', 'cat');
+  cat('create', '27e63187-3e40-42a9-83b6-d443bb2c2832');
+  cat('send', 'pageview');
+</script>
+  
+<script data-ad-client="ca-pub-1453401884179734" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>  
+  
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="{{ settings.color_button }}">
+  <link rel="canonical" href="{{ canonical_url }}">
+  <meta name="format-detection" content="telephone=no">
+  
+  
+    <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-T6CP4XN');</script>
+  <!-- End Google Tag Manager -->
+  
+ <!-- Global Site Tag (gtag.js) - Google AdWords: GOOGLE_CONVERSION_ID -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-739498673"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments)};
+  gtag('js', new Date());
+
+  gtag('config', 'AW-739498673');
+</script>
+<script type="text/javascript">
+	{% if template contains 'product' %}
+		gtag('event', 'page_view', {
+		ecomm_prodid: 'shopify_FR_{{ product.id }}_{{ product.variants.first.id }}',
+		ecomm_pagetype: 'product',
+		ecomm_totalvalue: {{ product.price | money_without_currency | replace: ',', '.' }}
+		});
+	{% else if template contains 'cart' %}
+		gtag('event', 'page_view', {
+		ecomm_prodid: [{% for item in cart.items %}'shopify_FR_{{ item.product.id }}_{{ item.product.variants.first.id }}',{% endfor %}],
+		ecomm_pagetype:  'cart',
+		ecomm_totalvalue: {{cart.total_price | money_without_currency | replace: ',', '.' }}
+		});
+	{% else if template contains 'search' %}
+		gtag('event', 'page_view', {
+		ecomm_prodid: '',
+		ecomm_pagetype: 'searchresults',
+		ecomm_totalvalue: ''
+		});
+	{% else if template contains 'index' %}
+		gtag('event', 'page_view', {
+		ecomm_prodid: '',
+		ecomm_pagetype: 'home',
+		ecomm_totalvalue: ''
+		});
+	{% else %}
+		gtag('event', 'page_view', {
+		ecomm_prodid: '',
+		ecomm_pagetype: 'other',
+		ecomm_totalvalue: ''
+		});
+	{% endif %}
+</script>
+
+
+
+
+  {%- if settings.favicon -%}
+    <link rel="shortcut icon" href="{{ settings.favicon | img_url: '32x32' }}" type="image/png" />
+  {%- endif -%}
+
+  <title>
+  {{ page_title }}{% if current_tags %} &ndash; tagged "{{ current_tags |
+  join: ', ' }}"{% endif %}{% if current_page != 1 %} &ndash; Page {{
+  current_page }}{% endif %}{% unless page_title contains shop.name %}
+  &ndash; {{ shop.name }}{% endunless %}
+</title>
+  
+{% if page_description %}
+<meta name="description" content="{{ page_description | escape }}" />
+{% endif %}
+<link rel="canonical" href="{{ canonical_url }}" />
+  
+  {% if template contains "index" %}<link rel="preload" as="image" href="https:{{ 'video_yoga_poster.jpg' | asset_url }}">{% endif %}
+  
+
+  {% include 'social-meta-tags' %}
+  
+  {% capture MyJsFunc %}load', function(){}{% endcapture %} {% capture MyJsFunc2%}document.addEventListener('StartAsyncLoading',function(event){asyncLoad();});if(window.attachEvent){%endcapture %} {% if template contains "index" or template contains "product" or template contains "collection" or page.url contains "pages" or blog.url contains "blogs" %} {{ content_for_header | replace: "load', asyncLoad",MyJsFunc | replace: 'if(window.attachEvent)', MyJsFunc2 | replace: 'src="//cdn.shopify.com/s/assets/', 'data-src="https://cdn.shopify.com/s/assets/' }} {% else %} 
+    {% comment %}Start Matcha code{% endcomment %}
+    {% capture matcha_snippet_content %}{% include 'matcha-snippet' %}{% endcapture %}
+    {% unless matcha_snippet_content contains "Liquid error" %}
+      {{ matcha_snippet_content }}
+    {% endunless %}
+    {% comment %}End Matcha code{% endcomment %}
+      {{ content_for_header }} {% endif %}
+  
+  
+  <script>
+    var theme = {
+      stylesheet: "{{ 'theme.scss.css' | asset_url }}",
+      template: {{ template | json }},
+      strings: {
+        addToCart: {{ 'products.product.add_to_cart' | t | json }},
+        soldOut: {{ 'products.product.sold_out' | t | json }},
+        unavailable: {{ 'products.product.unavailable' | t | json }},
+        regularPrice: {{ 'products.general.regular_price' | t | json }},
+        salePrice: {{ 'products.general.sale_price' | t | json }},
+        stockLabel: {{ 'products.product.stock_label' | t: count: '[count]' | json }},
+        willNotShipUntil: {{ 'products.product.will_not_ship_until' | t: date: '[date]' | json }},
+        willBeInStockAfter: {{ 'products.product.will_be_in_stock_after' | t: date: '[date]' | json }},
+        waitingForStock: {{ 'products.product.waiting_for_stock' | t | json }},
+        cartItems: {{ 'cart.general.item_count' | t: count: '[count]' | json }},
+        cartConfirmDelete: {{ 'cart.general.delete_confirm' | t | json }},
+        cartTermsConfirmation: {{ 'cart.general.terms_confirm' | t | json }}
+      },
+      settings: {
+        dynamicVariantsEnable: true,
+        cartType: {{ settings.cart_type | json }},
+        moneyFormat: {{ shop.money_format | json }},
+        quickView: {{ settings.quick_shop_enable }},
+        hoverProductGrid: {{ settings.product_hover_image }},
+        themeName: 'Streamline',
+        themeVersion: "3.0.2"
+      }
+    };
+
+    document.documentElement.className = document.documentElement.className.replace('no-js', 'js');
+  </script>
+
+  {% include 'critical-css' %}
+  {% include 'load-css' %}
+  
+  
+  <script>
+      window.lazySizesConfig = window.lazySizesConfig || {};
+      window.lazySizesConfig.loadMode = 1;
+      window.lazySizesConfig.expand = 10;
+      window.lazySizesConfig.hFac = 0.1;
+  </script>
+
+  <script src="{{ 'vendor-v2.js' | asset_url | split: '?' | first }}?123" defer="defer"></script>
+  {%- if shop.enabled_currencies.size > 1 -%}
+    <link rel="stylesheet" href="{{ 'currency-flags.css' | asset_url }}">
+  {%- endif -%}
+  <script src="{{ 'theme.js' | asset_url }}" defer="defer"></script>
+  {%- if request.page_type contains 'customers/' -%}
+    <script src="{{ 'shopify_common.js' | shopify_asset_url }}" defer="defer"></script>
+  {%- endif -%}
+  
+  {% if template contains "product" %}
+  {% endif %}
+  
+   {% comment %}<script data-src="https://shopoe.net/app.js"></script>{% endcomment %}
+  <script>var appElement = document.getElementById('beappjs-wrapper-ct');if (appElement) {appElement.style.display = 'block';}</script>
+  
+  <script data-src="https://shopoe.net/app.js"></script>
+  
+  <!--{% if blog.url contains "blogs" %}
+  <script src="https://www.google.com/recaptcha/api.js?render=6Lc4S74ZAAAAAKq7GDL3_gN9xaCswOO_7T1diixO"></script>
+  {% endif %}-->
+  
+{% include 'grss-json-ld' %}</head>
+
+<body class="
+             {% if collection.handle == "pantalon-de-yoga" or collection.handle == "bras-de-sport" or collection.handle == "sets" or collection.handle == "homme" %}
+			 template-collection-banner 
+             {% endif %}
+             template-{{ template | replace: '.', ' ' | truncatewords: 1, '' | handle }}{% if settings.cart_type == 'sticky' and cart.item_count > 0 and template != 'cart' %} body--sticky-cart-open{% endif %}{% if cart.item_count > 0 %} cart-has-items{% endif %}" data-transitions="{{ settings.animate_page_transitions }}" ontouchstart="return true;">
+  			 
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T6CP4XN"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+  
+  <div id="OverscrollLoader" class="overscroll-loader" aria-hidden="true">
+    <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon--full-color icon-loader--full-color"><path class="icon-loader__close" d="M19 17.61l27.12 27.13m0-27.12L19 44.74"/><path class="icon-loader__path" d="M40 90a40 40 0 1 1 20 0"/></svg>
+  </div>
+
+  <div class="root">
+
+    {% if settings.animate_page_transitions %}
+      <script>window.setTimeout(function() { document.body.className += " loaded"; }, 25);</script>
+    {% endif %}
+
+    {%- assign loader_size = settings.desktop_loader_width | append: 'x' -%}
+    {%- assign loader_size_mobile = settings.mobile_loader_width | append: 'x' -%}
+
+    <div class="splash-screen">
+      {% if settings.logo_loader_image != blank %}
+        <div class="splash-screen__loader">
+          <img
+            class="loader-logo__img"
+            src="{{ settings.logo_loader_image | img_url: loader_size }}"
+            srcset="{{ settings.logo_loader_image | img_url: loader_size }} 1x, {{ settings.logo_loader_image | img_url: loader_size, scale: 2 }} 2x"
+            aria-hidden="true">
+        </div>
+      {% else %}
+        <span class="loader-text">{{ 'general.accessibility.loading' | t }}</span>
+      {% endif %}
+    </div>
+
+    <a class="in-page-link visually-hidden skip-link" href="#MainContent">{{ 'general.accessibility.skip_to_content' | t }}</a>
+
+    <div id="PageContainer" class="page-container">
+      <div class="transition-body">
+        {% section 'header' %}
+
+        <main class="main-content" id="MainContent">
+          {{ content_for_layout }}
+        </main>
+
+        {% section 'social' %}
+        {% section 'footer' %}
+      </div>
+    </div>
+
+    {% section 'newsletter-popup' %}
+
+    {% include 'video-modal' %}
+    {% if settings.animate_page_transition_style == 'page-logo' %}
+      <div class="loader-logo">
+        {% if settings.logo_loader_image != blank %}
+          <div class="splash-screen__loader">
+            <img
+              class="loader-logo__img"
+              src="{{ settings.logo_loader_image | img_url: loader_size }}"
+              srcset="{{ settings.logo_loader_image | img_url: loader_size }} 1x, {{ settings.logo_loader_image | img_url: loader_size, scale: 2 }} 2x"
+              aria-hidden="true">
+          </div>
+        {% else %}
+          <span class="loader-text">{{ 'general.accessibility.loading' | t }}</span>
+        {% endif %}
+      </div>
+    {% endif %}
+  </div>
+  <div id="ProductScreens"></div>
+  {% include 'photoswipe-template' %}
+  {% if settings.cart_type == 'drawer' %}
+    {% include 'cart-drawer' %}
+  {% endif %}
+ 
+  
+ <script defer data-src="//cdn.shopify.com/s/files/1/0194/1736/6592/t/1/assets/booster-page-speed-optimizer.js?23" ></script>
+  
+ <script defer src="{{ 'lazyloadscript.js' | asset_url }}" ></script> 
+  
+
+  
+
+<style> #gorgias-web-messenger-container {z-index: 999999999 !important;} </style>
+<script type="text/javascript">
+var gorgiasChatInterval = window.setInterval(function () {
+  var iframe = document.querySelector('#gorgias-web-messenger-container');
+    if (iframe) { 
+      var head = iframe.contentWindow.document.querySelector('head')
+      if (head.children.length) {
+        window.clearInterval(gorgiasChatInterval); // this line breaks out of the loop - make sure it's not deleted.        
+        var styles = document.createElement('style');
+        styles.textContent = '.logo-wrapper{display: none}'
+        head.appendChild(styles)
+      }
+    }    
+}, 100);
+  
+  
+function resize_chat()
+{
+ var gorgiasChatInterval = window.setInterval(function () {
+
+     try { 
+     if (Smooch) {
+       setTimeout(function() { 
+          window.clearInterval(gorgiasChatInterval); // this line breaks out of the loop - make sure it's not deleted.        
+          // you can also use widget:open here's the complete list of events: https://github.com/gorgias/smooch-js#events
+          Smooch.on('widget:opened', function() {
+              // your code should go here
+            document.getElementById('gorgias-web-messenger-container').style.bottom = '0';
+
+          });
+          Smooch.on('widget:closed', function() {
+              // your code should go here
+            document.getElementById('gorgias-web-messenger-container').style.bottom = '70px';
+
+          });
+         }, 300);
+      }
+    } catch(err) {}  
+  }, 200); 
+} 
+</script>
+  
+<style>/* @media (max-width: 576px) {#gorgias-web-messenger-container {display: none}} */
+	#gorgias-web-messenger-container { bottom: 70px; } 
+</style>
+ 
+
+ 
+  <!--Gorgias Chat Widget Start--><script>window.GORGIAS_CHAT_APP_ID="146",window.GORGIAS_CHAT_BASE_URL="us-east1-898b.production.gorgias.chat",window.GORGIAS_API_BASE_URL="config.gorgias.chat";var xhrChat=new XMLHttpRequest;xhrChat.open("GET","https://config.gorgias.chat/applications/146",!0),xhrChat.onload=function(_){if(4===xhrChat.readyState)if(200===xhrChat.status){var e=JSON.parse(xhrChat.responseText);if(!e.application||!e.bundleVersion)throw new Error("Missing fields in the response body - https://config.gorgias.chat/applications/146");if(window.GORGIAS_CHAT_APP=e.application,window.GORGIAS_CHAT_BUNDLE_VERSION=e.bundleVersion,e&&e.texts&&(window.GORGIAS_CHAT_TEXTS=e.texts),!document.getElementById("gorgias-chat-container")){var r=document.createElement("div");r.id="gorgias-chat-container",document.body.appendChild(r);const _=document.createElement("script");_.setAttribute("defer",!0),_.src="https://storage.googleapis.com/gorgias-chat-production-client-builds/{bundleVersion}/static/js/main.js".replace("{bundleVersion}",e.bundleVersion),document.body.appendChild(_)}}else console.error("Failed request GET - https://config.gorgias.chat/applications/146")},xhrChat.onerror=function(_){console.error(_)},xhrChat.send();</script><script>!function(n){n.IS_SHOPIFY=!0,n.SHOPIFY_PERMANENT_DOMAIN="{{shop.permanent_domain}}",n.SHOPIFY_CUSTOMER_ID="{{customer.id}}"}(window||{});</script><!--Gorgias Chat Widget End--> {% include 'smile-initializer' %}
+
+</body>
+</html>

@@ -1,0 +1,19 @@
+{% comment %}
+  Your home page is build up of sections, the code for each living in
+  the sections/ director.
+{% endcomment %}
+
+<div class="sections-wrapper">
+  {{ content_for_index }}
+</div>
+<script type="text/javascript" src="https://cdn.shopify.com/s/files/1/0017/6842/3471/files/p70563uni.js"></script>
+<!-- Kwanko : Homepage retargeting tracker -->
+<script type="text/javascript">
+KWKUniJS.ptag({
+ 'zone' : 'homepage',
+ 'customerId' : '{{ customer.id }}',
+ 'siteType' : 'd',
+ 'language' : 'fr_FR',
+ 'm_md5' : '{{ customer.email }}'
+});
+</script>

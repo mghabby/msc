@@ -1,0 +1,22 @@
+{% section 'collection-header' %}
+
+{% section 'collection-filters' %}
+
+{% section 'collection-template' %}
+<script type="text/javascript" src="https://cdn.shopify.com/s/files/1/0017/6842/3471/files/p70563uni.js"></script>
+<!-- Kwanko : Category retargeting tracker -->
+<script type="text/javascript">
+var products = [];
+ {% for product in collection.products %}
+ products.push({{ product.id }});
+ {% endfor %}
+KWKUniJS.ptag({
+ 'zone' : 'listing',
+ 'categoryId' : '{{ collection.id }}',
+ 'products' : products,
+ 'customerId' : '{{ customer.email }}',
+ 'siteType' : 'd',
+'language' : 'fr_FR',
+ 'm_md5' : '{{ customer.id }}'
+});
+</script>

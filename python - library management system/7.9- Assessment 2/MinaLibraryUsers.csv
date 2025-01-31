@@ -1,0 +1,35 @@
+username,first_name,surname,house_number,street_name,postcode,email,date_of_birth
+user1,John,Doe,12,Main St,12345,john.doe@example.com,1990-01-01
+user2,Jane,Smith,34,Second St,67890,jane.smith@example.com,1985-05-23
+user3,Jim,Brown,56,Third St,13579,jim.brown@example.com,1978-12-11
+userc8d2542f,Henry,Fahmy,58,Broad St,3526,ali.jackson@example.com,1971-04-06
+user466e8b2e,Youssef,Ibrahim,51,Broad St,7895,hala.thomas@example.com,2001-01-03
+usera629dd3b,George,Salah,41,Queen St,6104,oliver.johnson@example.com,1978-10-22
+userfbb2d5d0,Nour,Fahmy,28,Church St,6572,george.gad@example.com,1962-11-05
+user8356d78b,Youssef,Ghaly,5,Queen St,4361,hana.smith@example.com,2008-06-15
+user11e319a9,Henry,Aziz,7,Church St,9854,mohamed.davies@example.com,1978-01-01
+user10f3f457,Hassan,Wilson,17,Broad St,8351,mariam.ezzat@example.com,1982-09-25
+usera2161975,Hala,Wilson,7,Queen St,3563,hala.gad@example.com,1969-08-16
+user73bbed4a,Amr,Mostafa,5,King St,9058,thomas.mostafa@example.com,1967-11-04
+user356ccba6,Alex,Ezzat,23,High St,5500,omar.mostafa@example.com,2009-05-04
+user11075982,Dina,Gad,26,Queen St,4108,james.wilson@example.com,1950-08-18
+user14454228,Samuel,Thomas,25,Park St,4995,james.brown@example.com,1976-07-09
+usere902b0eb,William,Fahmy,79,Main St,6326,hana.brown@example.com,1971-11-06
+user9c1c64a1,George,Mostafa,48,Broad St,1995,dina.evans@example.com,1986-07-08
+user050ffcbe,William,Smith,33,High St,4048,hala.mostafa@example.com,1997-07-03
+user4ea9910b,Sarah,Ghaly,20,High St,3743,oliver.wilson@example.com,1979-11-28
+userd285ee1f,Oliver,Ali,28,Main St,5825,alex.ibrahim@example.com,2008-03-26
+user3a3eed4b,Dina,Ghaly,49,High St,8196,alex.wilson@example.com,1958-02-21
+user07735414,Ali,Brown,6,High St,3877,samuel.evans@example.com,1967-01-18
+usera96257fb,Dina,Davies,38,Broad St,6419,sarah.ezzat@example.com,2009-02-10
+user645e587b,Omar,Johnson,13,Broad St,7265,mohamed.rashad@example.com,1985-12-13
+userddc2dcd3,James,Ezzat,6,Broad St,7714,thomas.young@example.com,1983-04-15
+user030de06a,Alex,Thomas,97,Church St,9622,sarah.fahmy@example.com,2010-04-24
+testuser,Test,User,123,Test St,12345,testuser@example.com,1990-01-01
+mina,Mina,Ghabrial,63,towncourt,br5,mina@hotmail.com,2020-03-15
+,mary,johnson,2,maryville,w10,mary@mary.com,2016-05-02
+reginald,regi,nald,8,yester,i90,yester@hotmail.com,1988-05-26
+thomas,tho,mas,45,yard,w3,thom@as.com,2012-05-12
+mike,mikey,mikeya,5,yern,w3,mike@mike.com,2003-05-13
+yeti,yet,thomas,3,yun,t5,yun@t5.com,2003-05-15
+luis,luis,suarezzzz,52,barcelona,l3,luis@suarez.com,2000-05-13
